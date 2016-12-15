@@ -1,0 +1,8 @@
+#to copy the last value of an ip address from a file called anirudh.txt 
+#e.g. a file which has a content of 10.0.0.200 will return 200 
+ 
+cat anirudh.txt | grep -oE '[^.]+'| tail -1 
+ 
+#to copy username of a system - the user has root access and shell enabled  
+ 
+grep /etc/passwd | grep ^root | grep -oE '^[^:]+' 
